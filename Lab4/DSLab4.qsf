@@ -1,0 +1,242 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 20:55:54  October 17, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		DSLab4_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY Top_level_DigitalLock
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:55:54  OCTOBER 17, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE bcd_code.v
+set_location_assignment PIN_Y23 -to in[3]
+set_location_assignment PIN_Y24 -to in[2]
+set_location_assignment PIN_AA22 -to in[1]
+set_location_assignment PIN_AA23 -to in[0]
+set_location_assignment PIN_AD17 -to out[6]
+set_location_assignment PIN_AE17 -to out[5]
+set_location_assignment PIN_AG17 -to out[4]
+set_location_assignment PIN_AH17 -to out[3]
+set_location_assignment PIN_AF17 -to out[2]
+set_location_assignment PIN_AG18 -to out[1]
+set_location_assignment PIN_AA14 -to out[0]
+set_global_assignment -name VERILOG_FILE two_threebitsadder_BCD_Code.v
+set_location_assignment PIN_Y23 -to I1[2]
+set_location_assignment PIN_Y24 -to I1[1]
+set_location_assignment PIN_AA22 -to I1[0]
+set_location_assignment PIN_AA23 -to I2[2]
+set_location_assignment PIN_AA24 -to I2[1]
+set_location_assignment PIN_AB23 -to I2[0]
+set_location_assignment PIN_AD17 -to BCD3[6]
+set_location_assignment PIN_AE17 -to BCD3[5]
+set_location_assignment PIN_AG17 -to BCD3[4]
+set_location_assignment PIN_AH17 -to BCD3[3]
+set_location_assignment PIN_AF17 -to BCD3[2]
+set_location_assignment PIN_AG18 -to BCD3[1]
+set_location_assignment PIN_AA14 -to BCD3[0]
+set_location_assignment PIN_AA17 -to BCD2[6]
+set_location_assignment PIN_AB16 -to BCD2[5]
+set_location_assignment PIN_AA16 -to BCD2[4]
+set_location_assignment PIN_AB17 -to BCD2[3]
+set_location_assignment PIN_AB15 -to BCD2[2]
+set_location_assignment PIN_AA15 -to BCD2[1]
+set_location_assignment PIN_AC17 -to BCD2[0]
+set_location_assignment PIN_AD18 -to BCD1[6]
+set_location_assignment PIN_AC18 -to BCD1[5]
+set_location_assignment PIN_AB18 -to BCD1[4]
+set_location_assignment PIN_AH19 -to BCD1[3]
+set_location_assignment PIN_AG19 -to BCD1[2]
+set_location_assignment PIN_AF18 -to BCD1[1]
+set_location_assignment PIN_AH18 -to BCD1[0]
+
+set_global_assignment -name VERILOG_FILE fireController_Code.v
+
+
+
+set_location_assignment PIN_AB28 -to power
+
+set_location_assignment PIN_AB23 -to T[4]
+set_location_assignment PIN_AB24 -to T[3]
+set_location_assignment PIN_AC24 -to T[2]
+set_location_assignment PIN_AB25 -to T[1]
+set_location_assignment PIN_AC25 -to T[0]
+
+set_location_assignment PIN_Y23 -to S[4]
+set_location_assignment PIN_Y24 -to S[3]
+set_location_assignment PIN_AA22 -to S[2]
+set_location_assignment PIN_AA23 -to S[1]
+set_location_assignment PIN_AA24 -to S[0]
+
+set_location_assignment PIN_AC17 -to Sensor1[0]
+set_location_assignment PIN_AA15 -to Sensor1[1]
+set_location_assignment PIN_AB15 -to Sensor1[2]
+set_location_assignment PIN_AB17 -to Sensor1[3]
+set_location_assignment PIN_AA16 -to Sensor1[4]
+set_location_assignment PIN_AB16 -to Sensor1[5]
+set_location_assignment PIN_AA17 -to Sensor1[6]
+
+set_location_assignment PIN_AA14 -to Sensor2[0]
+set_location_assignment PIN_AG18 -to Sensor2[1]
+set_location_assignment PIN_AF17 -to Sensor2[2]
+set_location_assignment PIN_AH17 -to Sensor2[3]
+set_location_assignment PIN_AG17 -to Sensor2[4]
+set_location_assignment PIN_AE17 -to Sensor2[5]
+set_location_assignment PIN_AD17 -to Sensor2[6]
+
+set_location_assignment PIN_AE18 -to SetTemp1[0]
+set_location_assignment PIN_AF19 -to SetTemp1[1]
+set_location_assignment PIN_AE19 -to SetTemp1[2]
+set_location_assignment PIN_AH21 -to SetTemp1[3]
+set_location_assignment PIN_AG21 -to SetTemp1[4]
+set_location_assignment PIN_AA19 -to SetTemp1[5]
+set_location_assignment PIN_AB19 -to SetTemp1[6]
+
+set_location_assignment PIN_AH18 -to SetTemp2[0]
+set_location_assignment PIN_AF18 -to SetTemp2[1]
+set_location_assignment PIN_AG19 -to SetTemp2[2]
+set_location_assignment PIN_AH19 -to SetTemp2[3]
+set_location_assignment PIN_AB18 -to SetTemp2[4]
+set_location_assignment PIN_AC18 -to SetTemp2[5]
+set_location_assignment PIN_AD18 -to SetTemp2[6]
+
+set_location_assignment PIN_F19 -to fan
+set_location_assignment PIN_G19 -to fireplace
+set_global_assignment -name VERILOG_FILE Top_level_TwoThreeBitsAdder.v
+set_global_assignment -name VERILOG_FILE Top_level_FirePlaceController.v
+set_global_assignment -name VERILOG_FILE DigitalLock_code.v
+set_global_assignment -name VERILOG_FILE clock_divider.v
+set_global_assignment -name VERILOG_FILE Top_level_DigitalLock.v
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BCD3[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Sensor2[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SetTemp2[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to fan
+set_instance_assignment -name IO_STANDARD "2.5 V" -to fireplace
+
+set_location_assignment PIN_Y23 -to w
+set_location_assignment PIN_R24 -to sys_reset
+set_location_assignment PIN_N21 -to reset_clk
+set_location_assignment PIN_Y2 -to clock_in
+set_location_assignment PIN_G19 -to leds[0]
+set_location_assignment PIN_F19 -to leds[1]
+set_location_assignment PIN_E19 -to leds[2]
+set_location_assignment PIN_F21 -to leds[3]
+set_location_assignment PIN_H19 -to f_out
+
+
+
+
+set_instance_assignment -name IO_STANDARD "2.5-V" -to leds[0]
+set_instance_assignment -name IO_STANDARD "2.5-V" -to leds[1]
+set_instance_assignment -name IO_STANDARD "2.5-V" -to leds[2]
+set_instance_assignment -name IO_STANDARD "2.5-V" -to leds[3]
+set_instance_assignment -name IO_STANDARD "2.5-V" -to f_out
+set_instance_assignment -name IO_STANDARD "2.5-V" -to sys_reset
+set_instance_assignment -name IO_STANDARD "2.5-V" -to reset_clk
+
+
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
